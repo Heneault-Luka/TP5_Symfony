@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Mes contacts{% endblock %}</title>
-        <link rel="stylesheet" href="https://bootswatch.com/4/sandstone/bootstrap.min.css">
-        
+        <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+        {#<link rel="stylesheet" href=" {{asset('css/app.css')}}">#}
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
@@ -17,7 +17,7 @@
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">LIste des contacts
+                        <a class="nav-link" href="{{path('app_contact')}}">Liste des contacts
                         </a>
                     </li>
                 </ul>
