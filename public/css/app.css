@@ -1,3 +1,9 @@
 .avatar{
-    border-radius: 50%;
+
+}
+.badge-pink{
+    background-color: #FFB6C1;
+}
+.border-pink{
+    border-color: #FFB6C1;
 }
