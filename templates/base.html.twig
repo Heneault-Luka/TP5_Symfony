@@ -16,19 +16,22 @@
 
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav mr-auto">
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Gestion des contacts</a>
-                    <div class="dropdown-menu" style="">
-                        <a class="dropdown-item" href="{{path('app_contact')}}">Liste des contacts</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{{path('app_listeContactsSexe', {'sexe': 0})}}">Liste des hommes</a>
-                        <a class="dropdown-item" href="{{path('app_listeContactsSexe', {'sexe': 1})}}">Liste des femmes</a>
-                    </div>
-                </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{path('app_categories')}}">Liste des catégories
-                        </a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Gestion des contacts</a>
+                        <div class="dropdown-menu" style="">
+                            <a class="dropdown-item" href="{{path('app_contact')}}">Liste des contacts</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{path('app_listeContactsSexe', {'sexe': 0})}}">Liste des hommes</a>
+                            <a class="dropdown-item" href="{{path('app_listeContactsSexe', {'sexe': 1})}}">Liste des femmes</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Gestion des catégories</a>
+                        <div class="dropdown-menu" style="">
+                            <a class="nav-link" href="{{path('app_categories')}}">Liste des catégories
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{path('nbContactsParCat')}}">nombre de contacts par catégorie</a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -36,9 +39,9 @@
         <div class="container">
             {% block body %}{% endblock %}
         </div>
-        {% block javascripts %}{% endblock %}
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        {% block javascripts %}{% endblock %}
     </body>
 </html>
